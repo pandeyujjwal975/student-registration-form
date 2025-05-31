@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Student Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" href="style.css"  />
+</head>
+<body>
+
+  <div class="form-container">
+    <h1><i class="fas fa-user-graduate"></i> Student Registration</h1>
+
+    <form id="registrationForm">
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" id="name" name="name" class="with-icon" placeholder="Enter Your Full Name" required />
+      </div>
+      
+      <div class="input-group">
+        <i class="fas fa-envelope"></i>
+        <input type="email" id="email" name="email" class="with-icon" placeholder="Enter Your Email" required />
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" id="password" name="password" class="with-icon" placeholder="Create a Password" required />
+      </div>
+      
+      <fieldset>
+        <legend class="required">Select Your Class</legend>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" id="classXI" name="class" value="Class XI" required />
+            <span>Class XI</span>
+          </label>
+          
+          <label class="radio-option">
+            <input type="radio" id="classXII" name="class" value="Class XII" />
+            <span>Class XII</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select Your Subjects</legend>
+        <div class="checkbox-group">
+          <label class="checkbox-option">
+            <input type="checkbox" id="math" name="subject" value="Math" />
+            <span>Mathematics <i class="fas fa-calculator"></i></span>
+          </label>
+          
+          <label class="checkbox-option">
+            <input type="checkbox" id="physics" name="subject" value="Physics" />
+            <span>Physics <i class="fas fa-atom"></i></span>
+          </label>
+          
+          <label class="checkbox-option">
+            <input type="checkbox" id="chemistry" name="subject" value="Chemistry" />
+            <span>Chemistry <i class="fas fa-flask"></i></span>
+          </label>
+          
+          <label class="checkbox-option">
+            <input type="checkbox" id="biology" name="subject" value="Biology" />
+            <span>Biology <i class="fas fa-dna"></i></span>
+          </label>
+          
+          <label class="checkbox-option">
+            <input type="checkbox" id="computer" name="subject" value="Computer Science" />
+            <span>Computer Science <i class="fas fa-laptop-code"></i></span>
+          </label>
+        </div>
+      </fieldset>
+
+      <div class="input-group">
+        <i class="fas fa-city"></i>
+        <select id="city" name="city" class="with-icon" required>
+          <option value="" disabled selected>Select Your City</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Bangalore">Bangalore</option>
+          <option value="Hyderabad">Hyderabad</option>
+          <option value="Chennai">Chennai</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <i class="fas fa-comment-dots"></i>
+        <textarea id="feedback" name="feedback" placeholder="Tell us about your academic interests and goals..." rows="4"></textarea>
+      </div>
+
+      <button type="submit">
+        <i class="fas fa-paper-plane"></i> Submit Registration
+      </button>
+    </form>
+  </div>
+
+  <div class="creator-footer">
+    Created by <a href="https://www.linkedin.com/in/pandeyujjwal975" target="_blank">Ujjwal Pandey</a>
+  </div>
+
+  <!-- Submission Modal -->
+  <div class="modal" id="submissionModal">
+    <div class="modal-content">
+      <i class="fas fa-check-circle"></i>
+      <h2>Submitted Successfully!</h2>
+      <p>Thank you for registering. We'll get back to you soon.</p>
+      <button id="closeModal">OK</button>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('registrationForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Show the modal
+      document.getElementById('submissionModal').style.display = 'flex';
+      
+      // You can add form submission logic here (like AJAX to a server)
+      // For now, we'll just show the success message
+      
+      // Reset form after submission (optional)
+      // this.reset();
+    });
+    
+    document.getElementById('closeModal').addEventListener('click', function() {
+      document.getElementById('submissionModal').style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
