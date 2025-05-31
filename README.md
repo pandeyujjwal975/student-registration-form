@@ -55,5 +55,5 @@ Pull requests welcome! For major changes, please open an issue first.
 
 ---
 
-**Crafted with ❤️ by [Ujjwal Pandey](https://www.linkedin.com/in/ujjwal-pandey)**  
+**Crafted with ❤️ by [Ujjwal Pandey](https://www.linkedin.com/in/pandeyujjwal975)**  
 *Feel free to connect!*
